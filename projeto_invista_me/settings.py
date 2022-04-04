@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from turtle import update
 import dj_database_url
 import os
 import whitenoise
@@ -28,7 +27,7 @@ SECRET_KEY = 'django-insecure-taxl=wd)=4-*%k#h^g_^p(n)uzswv^g$rz!!=c72=w5-ag5ej@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -87,7 +86,7 @@ DATABASES = {
 }
 
 prod_db = dj_database_url.config(conn_max_age=500)
-DATABASES["default"].update(prod_db)
+DATABASES['default'].update(prod_db)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
